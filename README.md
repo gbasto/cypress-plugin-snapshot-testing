@@ -10,7 +10,7 @@ This is a fork of the inactive project [cypress-plugin-snapshots](https://github
 ![cypress-plugin-snapshots](docs/images/cypress-plugin-snapshots.png)
 
 ## Installation
-`npm i cypress-plugin-snapshots -S`
+`npm i cypress-plugin-snapshot-testing -S`
 
 ## Usage for text snapshots
 ```javascript
@@ -109,7 +109,7 @@ Add this to your `cypress.json` configuration file:
 Find your `cypress/plugins/index.js` file and change it to look like this:
 
 ```javascript
-const { initPlugin } = require('cypress-plugin-snapshots/plugin');
+const { initPlugin } = require('cypress-plugin-snapshot-testing/plugin');
 
 module.exports = (on, config) => {
   initPlugin(on, config);
@@ -121,7 +121,7 @@ module.exports = (on, config) => {
 Find your `cypress/support/index.js` file and add the following line:
 
 ```javascript
-import 'cypress-plugin-snapshots/commands';
+import 'cypress-plugin-snapshot-testing/commands';
 ```
 
 ### Make changes to default configuration
@@ -131,7 +131,7 @@ Add the configuration below to your `cypress.json` file to make changes to the d
 
 ```javascript
 "env": {
-  "cypress-plugin-snapshots": {
+  "cypress-plugin-snapshot-testing": {
     "autoCleanUp": false,            // Automatically remove snapshots that are not used by test
     "autopassNewSnapshots": true,    // Automatically save & pass new/non-existing snapshots
     "diffLines": 3,                  // How many lines to include in the diff modal
@@ -165,7 +165,7 @@ Add the configuration below to your `cypress.json` file to make changes to the d
 ```
 
 ## Caveats :warning:
-There is currently an issue when running "All Tests" in Cypress with this plugin. You can follow the progress on the issue [here](https://github.com/meinaart/cypress-plugin-snapshots/issues/10) and [here](https://github.com/cypress-io/cypress/issues/3090). When running "All Tests" any tests that utilize `cypress-plugin-snapshots` will throw an error.
+There is currently an issue when running "All Tests" in Cypress with this plugin. You can follow the progress on the issue [here](https://github.com/meinaart/cypress-plugin-snapshot/issues/10) and [here](https://github.com/cypress-io/cypress/issues/3090). When running "All Tests" any tests that utilize `cypress-plugin-snapshots` will throw an error.
 
 ## Roadmap
 Below is a list of functionality that is under consideration for implementing in a next version.
@@ -182,7 +182,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## License
 This plugin is released under the MIT license.
 
-[npm-icon]: https://nodei.co/npm/cypress-plugin-snapshots.svg?downloads=true
-[npm-url]: https://npmjs.org/package/cypress-plugin-snapshots
-[ci-image]: https://github.com/meinaart/cypress-plugin-snapshots/workflows/test/badge.svg?branch=master
-[ci-url]: https://github.com/meinaart/cypress-plugin-snapshots/actions
+[npm-icon]: https://nodei.co/npm/cypress-plugin-snapshot-testing.svg?downloads=true
+[npm-url]: https://npmjs.org/package/cypress-plugin-snapshot-testing
+[ci-image]: https://github.com/meinaart/cypress-plugin-snapshot-testing/workflows/test/badge.svg?branch=master
+[ci-url]: https://github.com/meinaart/cypress-plugin-snapshot-testing/actions
