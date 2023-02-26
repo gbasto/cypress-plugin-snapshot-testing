@@ -1,5 +1,7 @@
-# cypress-plugin-snapshots
+# cypress-plugin-snapshot-testing
 > Plugin for snapshot tests in [Cypress.io](https://www.cypress.io/).
+
+This is a fork of the inactive project [cypress-plugin-snapshots](https://github.com/meinaart/cypress-plugin-snapshots)
 
 [![NPM][npm-icon]][npm-url]
 
